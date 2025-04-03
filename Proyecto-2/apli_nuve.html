@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API-NUVE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            padding-top: 56px;
+            font-size: 1.2em;
+            text-align: justify;
+            background-color: rgb(255, 249, 242);
+        }
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            right: 0;
+            width: 18%;
+            height: 85%;
+            overflow-y: auto;
+            background: #f8f9fa;
+            padding: 25px;
+        }
+        img {
+            display: block;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .sidebar .nav-item {
+            margin-bottom: 10px;
+        }
+        table {
+            text-align: center;
+            width: 100%;
+        }
+        thead {
+            background-color: #17a2b8;
+            color: white;
+        }
+        tbody tr:nth-child(odd),
+        tbody tr:nth-child(even) {
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LITC - DESARROLLO DE APLICACIONES EN LA NUBE</a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                
+                <img src="img/n1.jpg" alt="n1">
+                <h2 id="que"><br><br>¿Qué es el Desarrollo de Aplicaciones en la Nube?</h2>
+                <p ><br>
+                    El desarrollo de aplicaciones para la nube es el proceso de crear software que se ejecuta en servidores 
+                    remotos y se accede a través de internet. En lugar de depender de hardware local, estas aplicaciones 
+                    utilizan infraestructuras y servicios en la nube proporcionados por empresas como <b>Amazon Web Services 
+                        (AWS), Google Cloud Platform (GCP) y Microsoft Azure.</b><br>
+                </p>
+
+                <h4>Evolución del Desarrollo en la Nube</h4>
+                <p>
+                    <ul>
+                        <li><b>Antes de la Nube: </b>Las aplicaciones se ejecutaban en servidores físicos dentro de las empresas.</li>
+                        <li><b>Virtualización: </b> Se introdujo la posibilidad de dividir servidores físicos en entornos virtuales para optimizar recursos.</li>
+                        <li><b>Computación en la Nube: </b>Ahora, los servidores y la infraestructura se pueden alquilar y escalar automáticamente según la demanda.</li>
+                    </ul>
+                </p>
+                
+                
+                <h2 id="caracteristicas"><br><br>Características Claves de las Aplicaciones en la Nube</h2>
+                <div class="container mt-5" style="background-color:rgb(206, 247, 247) ;"><br>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Escalabilidad</h5>
+                                <p class="card-text">La capacidad de la aplicación puede aumentar o disminuir automáticamente según la cantidad de usuarios o la demanda del sistema.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Accesibilidad</h5>
+                                <p class="card-text">Se puede acceder desde cualquier dispositivo con conexión a internet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Alta Disponibilidad</h5>
+                                <p class="card-text">Los servidores en la nube permiten distribuir el tráfico y evitar caídas del servicio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Seguridad</h5>
+                                <p class="card-text">Utilizan autenticación avanzada, cifrado de datos y políticas de acceso restringidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Optimización de Costos</h5>
+                                <p class="card-text">Se paga solo por el uso de los recursos, reduciendo costos de infraestructura física.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p><strong>Ejemplo práctico:</strong> Netflix usa la nube para transmitir contenido en millones de dispositivos sin interrupciones.</p>
+                </div>
+            </div>
+
+            <img src="img/n2.jpg" alt="n2">
+
+            <div class="container mt-5">
+                <h2 id="tipo"><br><br>Tipos de Aplicaciones en la Nube</h2>
+            
+                <!-- SaaS Section -->
+                <div class="my-4">
+                  <h3 class="section-title">🔹 SaaS (Software as a Service)</h3>
+                  <p class="section-content">Las aplicaciones SaaS son accesibles desde un navegador sin necesidad de instalación.</p>
+                  <h4 class="section-content">📌 Ejemplos:</h4>
+                  <ul class="section-content">
+                    <li>Google Drive – Almacenamiento de archivos en la nube.</li>
+                    <li>Dropbox – Compartición de archivos.</li>
+                    <li>Salesforce – CRM para ventas y marketing.</li>
+                  </ul>
+                </div>
+            
+                <!-- PaaS Section -->
+                <div class="my-4">
+                  <h3 class="section-title">🔹 PaaS (Platform as a Service)</h3>
+                  <p class="section-content">Proporciona un entorno de desarrollo completo sin necesidad de administrar servidores.</p>
+                  <h4 class="section-content">📌 Ejemplos:</h4>
+                  <ul class="section-content">
+                    <li>Google App Engine – Permite desarrollar aplicaciones sin preocuparse por la infraestructura.</li>
+                    <li>Heroku – Plataforma que permite desplegar aplicaciones rápidamente.</li>
+                  </ul>
+                </div>
+            
+                <!-- IaaS Section -->
+                <div class="my-4">
+                  <h3 class="section-title">🔹 IaaS (Infrastructure as a Service)</h3>
+                  <p class="section-content">Proporciona servidores virtuales, almacenamiento y redes.</p>
+                  <h4 class="section-content">📌 Ejemplos:</h4>
+                  <ul class="section-content">
+                    <li>Amazon EC2 – Servidores virtuales en AWS.</li>
+                    <li>Google Compute Engine – Infraestructura de servidores escalables.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <img src="img/n3.avif" alt="n3">
+            
+              <div class="container mt-5" style="background-color: rgb(188, 240, 222);">
+                <h2 id="tec"><br><br>Tecnologías y Herramientas Usadas en el Desarrollo en la Nube</h2>
+            
+                <!-- Accordion Component -->
+                <div class="accordion" id="accordionExample">
+            
+                  <!-- Lenguajes de Programación -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Lenguajes de Programación
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Los más utilizados en la nube incluyen:
+                        <ul>
+                          <li><strong>JavaScript (Node.js)</strong> – Ideal para APIs y microservicios.</li>
+                          <li><strong>Python</strong> – Lenguaje versátil para inteligencia artificial y análisis de datos.</li>
+                          <li><strong>Java</strong> – Usado en aplicaciones empresariales en la nube.</li>
+                          <li><strong>Go</strong> – Optimizado para entornos escalables y eficientes.</li>
+                          <li><strong>PHP</strong> – Popular para el desarrollo web con bases de datos en la nube.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <!-- Bases de Datos en la Nube -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Bases de Datos en la Nube
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><strong>MongoDB Atlas</strong> – Base de datos NoSQL escalable.</li>
+                          <li><strong>Firebase</strong> – Base de datos en tiempo real de Google.</li>
+                          <li><strong>MySQL y PostgreSQL</strong> – Bases de datos relacionales compatibles con la nube.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <!-- Plataformas y Servicios en la Nube -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Plataformas y Servicios en la Nube
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><strong>Amazon Web Services (AWS)</strong> – Infraestructura más utilizada globalmente.</li>
+                          <li><strong>Microsoft Azure</strong> – Ideal para aplicaciones empresariales y Windows.</li>
+                          <li><strong>Google Cloud Platform (GCP)</strong> – Potente para análisis de datos e inteligencia artificial.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <!-- Contenedores y Orquestación -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Contenedores y Orquestación
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Para ejecutar aplicaciones de manera eficiente y escalable:
+                        <ul>
+                          <li><strong>Docker</strong> – Permite empaquetar aplicaciones en contenedores portátiles.</li>
+                          <li><strong>Kubernetes</strong> – Administra múltiples contenedores y los escala automáticamente.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+              </div>
+
+              <br>
+              
+
+              <h2 id="seguri"><br><br>🔒 Seguridad en el Desarrollo de Aplicaciones en la Nube</h2><br>
+              <p>Para proteger los datos y evitar ataques, se implementan estrategias como:</p>
+              <ul>
+                <li><b>✅ Cifrado de Datos</b> Protege la información en tránsito y en reposo.</li>
+                <li><b>✅ Autenticación Multifactor (MFA)</b> Verificación en dos pasos para usuarios.</li>
+                <li><b>✅ Gestión de Identidades y Accesos (IAM)</b> Control de permisos en la  nube.</li>
+                <li><b>✅ Monitoreo y Auditoría</b> Uso de herramientas como AWS CloudTrail y Azure Security Center.</li>
+                <li><b>✅ Cumplimiento de Normativas</b> Cumple con ISO 27001, GDPR, NIST y otras regulaciones de seguridad.</li>
+            </ul>
+            <p>Ejemplo: AWS Shield protege contra ataques DDoS a sitios web y aplicaciones en la nube.</p>
+
+            <img src="img/n4.jpg" alt="n4">
+
+            <div class="container mt-5">
+              <h2 id="ven"><br><br>Ventajas y Desafíos del Desarrollo en la Nube</h2>
+                <h2 class="text-center mb-4"></h2>
+            
+                <!-- Ventajas Table -->
+
+                <h4>Ventajas del Desarrollo en la Nube</h4>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Icono</th>
+                      <th class="text-center">Ventaja</th>
+                      <th class="text-center">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center"><span class="icon">🎯</span></td>
+                      <td>Reducción de Costos</td>
+                      <td>No necesitas comprar servidores físicos.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><span class="icon">🎯</span></td>
+                      <td>Mayor Rapidez en el Desarrollo</td>
+                      <td>Los desarrolladores pueden enfocarse en el código sin preocuparse por la infraestructura.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><span class="icon">🎯</span></td>
+                      <td>Escalabilidad Dinámica</td>
+                      <td>La aplicación puede crecer automáticamente según el tráfico.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><span class="icon">🎯</span></td>
+                      <td>Seguridad Mejorada</td>
+                      <td>Copias de seguridad y protocolos avanzados de seguridad.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><span class="icon">🎯</span></td>
+                      <td>Integración con Otros Servicios</td>
+                      <td>Como inteligencia artificial y análisis de datos.</td>
+                    </tr>
+                  </tbody>
+                </table>
+            
+                <!-- Ejemplo de uso de la Nube -->
+                <div class="alert alert-info">
+                  <strong>Ejemplo:</strong> Spotify utiliza Google Cloud para analizar datos de usuarios en tiempo real.
+                </div>
+                <br><br>
+                <!-- Desafíos Table -->
+                <h4>Desafíos y Desventajas</h4>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Icono</th>
+                      <th class="text-center">Desafío</th>
+                      <th class="text-center">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center"><span class="icon">🚧</span></td>
+                      <td>Dependencia de la Conectividad a Internet</td>
+                      <td>Si falla la conexión, la aplicación puede no ser accesible.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><span class="icon">🚧</span></td>
+                      <td>Costos Variables</td>
+                      <td>Si la aplicación crece inesperadamente, los costos pueden aumentar.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><span class="icon">🚧</span></td>
+                      <td>Seguridad</td>
+                      <td>Si no se configuran correctamente, pueden ocurrir filtraciones de datos.</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><span class="icon">🚧</span></td>
+                      <td>Complejidad en la Migración</td>
+                      <td>Mover aplicaciones antiguas a la nube puede ser un reto técnico.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <img src="img/n5.jpg" alt="n5">
+
+              <h2 id="ejemplo"><br><br>Ejemplo Práctico: Creando una Aplicación en la Nube</h2><br>
+              <ul>
+              <li><b>1️⃣ Backend:</b> Desarrollar una API REST con Node.js y Express.</li>
+              <li><b>2️⃣ Base de Datos:</b> Utilizar MongoDB Atlas como base de datos en la nube.</li>
+              <li><b>3️⃣ Autenticación:</b> Autenticación: Implementar autenticación con JWT o OAuth 2.0.</li>
+              <li><b>4️⃣ Servidor en la Nube:</b> Desplegar el backend en AWS Lambda o Google Cloud Functions.</li>
+              <li><b>5️⃣ Frontend:</b> Usar React.js o Angular para la interfaz de usuario.</li>
+              <li><b>6️⃣ Despliegue Final:</b> Utilizar Vercel, Netlify o Firebase Hosting para el frontend.</li>
+              </ul>
+
+            
+                <h2 id="conclusion"><br><br>Conclusión</h2><br>
+                <p>
+                    El desarrollo en la nube permite a las empresas y desarrolladores construir aplicaciones escalables, 
+                    seguras y accesibles globalmente. Aunque existen desafíos como la seguridad y costos, los beneficios 
+                    superan ampliamente las limitaciones.<br>
+
+                    El futuro del desarrollo en la nube está ligado a tecnologías como inteligencia artificial, blockchain 
+                    y computación sin servidor (serverless), lo que promete aplicaciones aún más potentes y eficientes.<br>
+                </p>
+                <br>
+                <img src="img/n6.jpg" alt="n6">
+                <br><br>
+                <h2 id="extra"></h2>
+                <h2 class="text-center mb-4">Información Extra</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/5T9a2AmbmJE?si=6F0e0gpXXY2p06Qy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/9XoaU5IMkRY?si=2CD9Y5YXjiHNq9w-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Índice estático -->
+            <div class="col-md-3 sidebar">
+                <h5>Índice</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#que">¿Qué es el Desarrollo de Aplicaciones en la Nube?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características Claves de las Aplicaciones en la Nube</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tipo">Tipos de Aplicaciones en la Nube</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tec">Tecnologías y Herramientas Usadas en el Desarrollo en la Nube</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#seguri">Seguridad en el Desarrollo de Aplicaciones en la Nube</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ven">Ventajas y Desafíos del Desarrollo en la Nube</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ejemplo">Ejemplo Práctico: Creando una Aplicación en la Nube</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#extra">Extra</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 LITC - Diseño Grafico - Desarrollo de Aplicaciones en la nuve | Elisa Aguilar Valadez</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

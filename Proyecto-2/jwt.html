@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JWT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            padding-top: 56px;
+            font-size: 1.2em;
+            text-align: justify;
+            background-color: rgb(255, 249, 242);
+        }
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            right: 0;
+            width: 18%;
+            height: 85%;
+            overflow-y: auto;
+            background: #f8f9fa;
+            padding: 25px;
+        }
+        img {
+            display: block;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .sidebar .nav-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LITC - JWT</a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                
+                <img src="img/j1.png" alt="j1">
+
+                <h2 id="que"><br><br>¿Qué es JWT?</h2>
+                <p><br>
+                    <b>JSON Web Token</b> (JWT) es un estándar abierto (RFC 7519) que <b>define un método compacto y 
+                    seguro para la transmisión de información entre partes en formato JSON.</b> Estos tokens 
+                    son autovalidados, lo que significa que contienen toda la información necesaria para 
+                    verificar su autenticidad sin necesidad de consultar una base de datos.
+                </p>
+                
+                <h2 id="Para_que"><br><br>¿Para qué sirven los JSON Web Tokens?</h2><br>
+                <p>
+                    Los JWT se utilizan principalmente para:<br>
+                    ✅ <b>Autenticación:</b> Permiten a los usuarios iniciar sesión una vez y utilizar el 
+                        mismo token en cada solicitud sin necesidad de volver a autenticarse.<br>
+                    ✅ <b>Autorización:</b> Un backend puede verificar un token para conceder acceso a 
+                        ciertos recursos.<br>
+                    ✅ <b>Intercambio de información:</b> Los JWT pueden ser utilizados para enviar información 
+                        entre partes de manera segura, ya que están firmados digitalmente.<br>
+                </p>
+
+                <h2 id="componentes"><br><br>Componentes de un JSON Web Token (JWT)</h2>
+                <table class="table table-bordered table-striped mt-4">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Componente</th>
+                        <th>Descripción</th>
+                        <th style="width: 30%;">Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Header (Encabezado)</strong></td>
+                        <td>Contiene el tipo de token y el algoritmo de firma utilizado.</td>
+                        <td>
+                            <p>
+                                {<br>
+                                 "alg": "HS256",<br>
+                                 "typ": "JWT"<br>
+                                }<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Payload (Cuerpo o Datos)</strong></td>
+                        <td>Contiene los datos (claims) como la identidad del usuario y la fecha de expiración.</td>
+                        <td>
+                            <p>
+                                {<br>
+                                  "sub": "1234567890",<br>
+                                  "name": "John Doe",<br>
+                                  "iat": 1712534107,<br>
+                                  "exp": 1712537707<br>
+                                }<br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Signature (Firma)</strong></td>
+                        <td>Se genera codificando el Header y el Payload con una clave secreta.</td>
+                        <td>
+                            <p>
+                                HMACSHA256(<br>
+                                base64UrlEncode(header) + "." + base64UrlEncode(payload),<br>
+                                secret<br>
+                                )<br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h2 id="bene_cons"><br><br>Beneficios y Consideraciones</h2><br>
+                <h5>✅ Ventajas</h5><br>
+                <ul>
+                    <li><b>Sin estado:</b> No requiere que el servidor almacene sesiones.</li>
+                    <li><b>Seguridad:</b> Se pueden usar firmas digitales para garantizar la autenticidad.</li>
+                    <li><b>Compacto:</b> Su formato en Base64 lo hace ideal para transmisión en HTTP.</li>
+                </ul><br>
+                <h5>⚠️ Consideraciones</h5><br>
+                <ul>
+                    <li> No almacenar en localStorage si se trata de información sensible. Usa httpOnly cookies si es posible.</li>
+                    <li> Renovar tokens con refresh tokens en sesiones largas.</li>
+                    <li> Usar algoritmos seguros como RS256 en lugar de HS256 cuando sea posible.</li>
+                </ul>
+ 
+                <h2 id="usa"><br><br>¿Cómo se usan los JWT en una aplicación?</h2><br>
+                <ul>
+                    <li><b>Generación del token</b>El servidor emite un JWT cuando el usuario inicia sesión. Por ejemplo, en Node.js con <b>jsonwebtoken:</b></li>
+                    <img src="img/ej1.png" alt="h2"><br>
+                    <li><b>Uso en el Frontend</b>El token se almacena en el cliente (por ejemplo, en <b>localStorage</b> o <b>sessionStorage):</b></li>
+                    <img src="img/ej2.png" alt="h2"><br>
+                    <p>Luego, se envía en cada solicitud al backend mediante el encabezado <b>Authorization:</b></p>
+                    <img src="img/ej3.png" alt="h2"><br>
+                    <li><b>Validación en el Backend</b>El backend verifica el token antes de permitir el acceso:</li>
+                    <img src="img/ej4.png" alt="h2">
+                </ul>
+
+
+                <h2 id="conclusion"><br><br>Conclusión</h2><br>
+                <p>
+                    JSON Web Tokens (JWT) son una solución eficiente y segura para la autenticación y autorización 
+                    en aplicaciones web y móviles. Su estructura compacta y autovalidada permite la transmisión de 
+                    información sin necesidad de almacenar sesiones en el servidor, lo que mejora el rendimiento y 
+                    escalabilidad.<br><br>
+
+                    Sin embargo, es crucial implementar buenas prácticas de seguridad, como el uso de algoritmos 
+                    robustos, la protección de claves secretas y el manejo adecuado de los tokens para evitar 
+                    vulnerabilidades como el robo de credenciales.<br><br>
+
+                    En definitiva, JWT es una herramienta poderosa para gestionar la identidad y el acceso a recursos, 
+                    siendo ampliamente utilizada en sistemas modernos que requieren autenticación basada en tokens.<br><br>
+                </p>
+                <br>
+                <img src="img/j2.png" alt="j2">
+                <br><br>
+        <h2 id="extra"></h2>
+        <h2 class="text-center mb-4">Información Extra</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tWQobKFQLG0?si=jogyVhYCVQEuf67a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fyTxwIa-1U0?si=TBxsSnzo7ymUjZwv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div> <br>
+                <img style="width: 90%;" src="img/JWT.png" alt="JWT">
+    </div>
+            </div>
+            
+
+            <!-- Índice estático -->
+            <div class="col-md-3 sidebar">
+                <h5>Índice</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#que">¿Qué es JWT?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Para_que">¿Para qué sirven los JSON Web Tokens</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#componentes">Componentes fe JWT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bene_cons">Beneficios y Consideraciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#usa">¿Cómo se usan los JWT en una aplicación?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#extra">Extra</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 LITC - Diseño Grafico - JWT | Elisa Aguilar Valadez</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

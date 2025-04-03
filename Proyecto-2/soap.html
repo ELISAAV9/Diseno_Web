@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SOAP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            padding-top: 56px;
+            font-size: 1.2em;
+            text-align: justify;
+            background-color: rgb(255, 249, 242);
+        }
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            right: 0;
+            width: 18%;
+            height: 95%;
+            overflow-y: auto;
+            background: #f8f9fa;
+            padding: 25px;
+        }
+        img {
+            display: block;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .sidebar .nav-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LITC - SOAP</a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                
+                <img src="img/ss.jpg" alt="s0">
+                <h2 id="que"><br><br>¿Qué es SOAP?</h2>
+                <p><br>
+                    SOAP <b>(Simple Object Access Protocol) </b> un protocolo de
+                    comunicación utilizado para intercambiar información
+                    estructurada en la implementación de servicios web. Fue
+                   desarrollado para facilitar la comunicación entre sistemas
+                    distribuidos a través de la web. <br>
+                    SOAP es un protocolo de comunicación basado en XML
+                    (Extensible Markup Language) que permite que
+                    aplicaciones en diferentes plataformas se comuniquen
+                    entre sí de manera independiente del lenguaje de
+                    programación y el sistema operativo utilizados. Su nombre,
+                    "Simple Object Access Protocol", enfatiza su simplicidad y
+                    su capacidad para acceder a objetos en sistemas remotos a través de la web.
+                </p>
+                
+                <h2 id="caracteristicas"><br><br>Características de SOAP</h2><br>
+                <p>
+                    Las principales características de SOAP incluyen:
+                </p>
+                <ol>
+                    <li><b>Basado en XML: </b>SOAP utiliza XML como su formato de
+                        mensaje, lo que lo hace legible y comprensible tanto para
+                        humanos como para máquinas.
+                    </li>
+                    <li><b>Protocolo independiente: </b>SOAP no está vinculado a
+                        ningún protocolo de transporte específico, lo que significa
+                        que puede utilizarse con una variedad de protocolos, como
+                        HTTP, SMTP y más.
+                    </li>
+                    <li><b> Plataforma independiente: </b> SOAP es independiente de la
+                        plataforma y el lenguaje de programación, lo que permite
+                        la interoperabilidad entre sistemas heterogéneos.
+                    </li>
+                    <li><b>Lenguaje neutro: </b> SOAP no favorece ningún lenguaje de
+                        programación en particular y se puede utilizar con
+                        cualquier lenguaje que admita la creación y el análisis de
+                        mensajes XML.
+                    </li>
+                    <li><b>Extensibilidad: </b> SOAP permite la inclusión de información
+                        adicional en los mensajes, lo que lo hace altamente
+                        extensible y adaptable a diferentes necesidades.
+                    </li>
+                </ol>
+                
+                <br>
+
+                <img src="img/s1.png" alt="s1">
+                <br>
+
+                <h2 id="usa"><br><br>Usabilidad de SOAP</h2><br>
+                <p>
+                    SOAP se utiliza en una variedad de aplicaciones y escenarios, como:
+                </p>
+                <ul>
+                    <li><b>Servicios Web: </b>SOAP es un componente fundamental de
+                        los servicios web, donde se utiliza para la comunicación
+                        entre aplicaciones a través de la web.
+                    </li>
+                    <li><b>Integración de sistemas: </b>Se utiliza para integrar sistemas
+                        heterogéneos, permitiendo que aplicaciones desarrolladas
+                        en diferentes lenguajes y plataformas se comuniquen de
+                        manera efectiva.
+                    </li>
+                    <li><b> Comunicación entre aplicaciones empresariales: </b>Las
+                        organizaciones utilizan SOAP para la comunicación entre
+                        aplicaciones empresariales críticas, lo que facilita la
+                        automatización de procesos y la transferencia segura de
+                        datos.
+                    </li>
+                </ul>
+
+                <h2 id="funcionamiento"><br><br>Funcionamiento de SOAP</h2><br>
+                <p>
+                    El funcionamiento de SOAP implica la creación, envío y
+                    recepción de mensajes SOAP. Un mensaje SOAP consta de
+                    un sobre (encabezado) y un cuerpo. El sobre contiene
+                    información sobre la estructura y el procesamiento del
+                    mensaje, mientras que el cuerpo contiene los datos a
+                    transmitir.<br><br>
+                    Cuando una aplicación envía una solicitud SOAP a un
+                    servicio web, el mensaje se envía al servidor web que aloja
+                    el servicio. El servidor procesa la solicitud, realiza la
+                    operación especificada y devuelve una respuesta en forma
+                    de otro mensaje SOAP. Esta respuesta se puede analizar y
+                    procesar en la aplicación cliente.
+
+                </p>
+                <br>
+                <img src="img/s2.png" alt="s2">
+
+                <h2 id="ventajas"><br><br>Ventajas de SOAP</h2><br>
+                <p>
+                    Algunas de las ventajas adicionales de SOAP incluyen:<br>
+                    <b>Legibilidad:</b> Los mensajes SOAP son legibles por
+                    humanos debido a su formato XML, lo que facilita la
+                    depuración y el monitoreo.<br>
+                    <b>Estructura predefinida:</b> SOAP define una estructura de
+                    mensaje clara, lo que facilita la comprensión y el desarrollo
+                    de aplicaciones.<br>
+                    <b>Amplia adopción: </b>SOAP ha sido ampliamente adoptado
+                    en la industria y es compatible con numerosas tecnologías
+                    y plataformas.<br>
+                </p>
+
+                <h2 id="Desventajas"><br><br>Desventajas de SOAP</h2><br>
+                <p>
+                    A pesar de sus muchas ventajas, SOAP también tiene
+                    algunas desventajas:<br>
+                    <b>Overhead:</b> El formato XML puede agregar sobrecarga en
+                       términos de tamaño de mensaje y procesamiento, lo que
+                       puede hacer que SOAP sea menos eficiente en
+                       comparación con otros protocolos más ligeros.<br>
+                    <b>Complejidad:</b> Aunque SOAP es extensible, su flexibilidad
+                       puede llevar a una mayor complejidad en la
+                       implementación y la comprensión.<br>
+                    <b>Velocidad de desarrollo:</b> En algunos casos, puede llevar
+                       más tiempo desarrollar servicios web basados en SOAP en
+                       comparación con tecnologías más modernas.<br>
+                </p>
+
+                <br>
+                <img src="img/s3.jpg" alt="s3">
+                <br>
+                <H2 id="beneficios"><br><br>Beneficios de SOAP</H2>
+                <p>SOAP ofrece varios beneficios clave, que incluyen:</p>
+                <ol>
+                    <li><b>Interoperabilidad: </b>SOAP permite la interoperabilidad
+                        entre diferentes sistemas, lo que facilita la integración de
+                        aplicaciones y servicios.
+                    </li>
+                    <li><b>Seguridad: </b>Puede implementarse con medidas de
+                        seguridad sólidas, como SSL/TLS, para garantizar la
+                        confidencialidad y la autenticación de los datos.
+                    </li>
+                    <li><b>Extensibilidad: </b>SOAP es altamente extensible y permite
+                        agregar información adicional según las necesidades de la
+                        aplicación.
+                    </li>
+                    <li><b>Robustez: </b>Su estructura basada en XML lo hace
+                        resistente a cambios en la plataforma y el lenguaje de
+                        programación.
+                    </li>
+                    <li><b>Protocolo independiente: </b>Puede utilizarse con una
+                        variedad de protocolos de transporte, lo que lo hace
+                        versátil.
+                    </li>
+                </ol>
+                <h2 id="SOAP_SOA"><BR><BR>Diferencias entre SOAP y SOA</h2>
+                <P>
+                    Es importante destacar que SOAP y SOA son conceptos
+                    relacionados pero distintos:<br>
+                    <b>SOAP</b> es un protocolo de comunicación utilizado para la
+                    transferencia de datos estructurados a través de la web.<br><br>
+                    <b>SOA</b> (Arquitectura Orientada a Servicios) es un enfoque
+                    arquitectónico que promueve la creación de sistemas
+                    distribuidos donde los servicios son componentes
+                    independientes que se pueden acceder de manera remota.<br>
+                    SOAP es una de las tecnologías que puede utilizarse en una
+                    arquitectura SOA, pero SOA abarca un enfoque más amplio
+                    que incluye la gestión de servicios, la orquestación y la
+                    exposición de servicios.
+                </P>
+
+                <img src="img/s5.png" alt="s5">
+
+                <h2 id="conclusion"><br><br>Conclusión</h2><br>
+                <p>
+                    En resumen, SOAP es un protocolo de comunicación
+                    basado en XML ampliamente utilizado en servicios web y
+                    aplicaciones empresariales para facilitar la interoperabilidad
+                    y la comunicación entre sistemas heterogéneos. Aunque
+                    tiene ventajas notables, también presenta desventajas, y su
+                    elección como protocolo depende de los requisitos
+                    específicos del proyecto. Además, es importante distinguir
+                    entre SOAP y SOA, ya que ambos desempeñan roles
+                    diferentes en el desarrollo de sistemas distribuidos.
+                </p>
+                <br>
+                <img src="img/s6.jpg" alt="s6">
+
+                <h2 id="extra"><br><br>Información Extra</h2><br>
+                <img style="width: 90%;" src="img/SOAP.png" alt="SOAP">
+            </div>
+            
+
+            <!-- Índice estático -->
+            <div class="col-md-3 sidebar">
+                <h5>Índice</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#que">¿Qué es SOAP?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características de SOAP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#usa">Usabilidad de SOAP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funcionamiento">Funcionamiento de SOAP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ventajas">Ventajas de SOAP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Desventajas">Desventajas de SOAP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios de SOAP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#SOAP_SOA">Diferencias entre SOAP y SOA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#extra">Información Extra</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 LITC - Diseño Grafico - SOAP | Elisa Aguilar Valadez</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

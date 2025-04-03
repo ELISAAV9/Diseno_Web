@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contenedores</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            padding-top: 56px;
+            font-size: 1.2em;
+            text-align: justify;
+            background-color: rgb(255, 249, 242);
+        }
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            right: 0;
+            width: 18%;
+            height: 90%;
+            overflow-y: auto;
+            background: #f8f9fa;
+            padding: 25px;
+        }
+        img {
+            display: block;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .sidebar .nav-item {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LITC - CONTENEDORES</a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                
+                <img src="img/c1.webp" alt="c1">
+                <h2 id="que"><br><br>¿Qué son los Contenedores?</h2>
+                <p><br>
+                    Los contenedore<b> son paquetes de software que incluyen todos los elementos necesarios para que 
+                        ejecutes tus productos en cualquier entorno.</b> Como virtualizan el sistema operativo, se pueden 
+                        ejecutar en cualquier parte, desde un centro de datos privado hasta la nube pública o incluso el 
+                        portátil personal de un desarrollador. Desde Gmail a YouTube, pasando por la Búsqueda, en Google todo 
+                        se hace en contenedores. La creación de contenedores permite a nuestros equipos de desarrollo moverse 
+                        con rapidez, desplegar software con eficacia y funcionar a una escala sin precedentes.<br>
+                        Hemos aprendido mucho sobre cómo ejecutar las cargas de trabajo en contenedores y hemos compartido 
+                        esos conocimientos con la comunidad en todo momento: desde la primera etapa en que contribuimos con 
+                        los cgroups al kernel de Linux hasta que extrajimos los diseños de nuestras herramientas internas y 
+                        compartimos su código con la comunidad en el proyecto Kubernetes.
+                </p>
+                
+                <h2 id="definicion"><br><br>Definicion de Conytenedores</h2><br>
+                <p>
+                    Los contenedores son paquetes ligeros que incluyen el código de las aplicaciones junto con sus 
+                    dependencias, como versiones concretas de entornos de ejecución de ciertos lenguajes de programación 
+                    y bibliotecas indispensables para ejecutar los servicios de software.<br><br>
+                    NOTA --> Con los contenedores resulta muy fácil compartir recursos de CPU, memoria, almacenamiento y red 
+                    a nivel de sistema operativo. Además, constituyen un mecanismo de empaquetado lógico en el que se pueden 
+                    abstraer las aplicaciones del entorno en el que se ejecutan realmente. 
+                </p>
+
+                <img src="img/c2.webp" alt="c2">
+                <br>
+
+                <h2 id="ventajas"><br><br>Ventajas de Contenedores</h2>
+                <div class="container mt-5" style="background-color: rgb(207, 247, 233);"><br>
+                    <h2 class="text-center mb-4"></h2>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Separación de responsabilidades</h5>
+                            <p class="card-text">La creación en contenedores permite separar de forma clara las responsabilidades, ya que los desarrolladores se centran en la lógica y las dependencias de las aplicaciones, mientras que los equipos de operaciones de TI se dedican a desplegarlas y gestionarlas sin preocuparse por detalles concretos, como versiones de software o configuraciones específicas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Portabilidad de las cargas de trabajo</h5>
+                            <p class="card-text">Como los contenedores se pueden ejecutar casi en cualquier lugar, resulta facilísimo desarrollarlos y desplegarlos en sistemas operativos Linux, Windows y Mac; en máquinas virtuales o servidores físicos; en equipos de desarrolladores o centros de datos on‑premise; y, por supuesto, en la nube pública.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Aislamiento de aplicaciones</h5>
+                            <p class="card-text">Los contenedores virtualizan los recursos de CPU, memoria, almacenamiento y red a nivel de sistema operativo, lo que proporciona a los desarrolladores una vista del sistema operativo aislado lógicamente de las demás aplicaciones.</p>
+                        </div>
+                    </div><br>
+                </div>
+
+                <br>
+                <img src="img/c3.jpg" alt="c3">
+
+                <h2 id="maqu"><br><br>¿Contenedores o máquinas virtuales?</h2><br>
+                <p>
+                    Un sistema operativo invitado, como Linux o Windows, se ejecuta en un sistema operativo anfitrión 
+                    con acceso al hardware subyacente. Piensa en los contenedores como si fueran máquinas virtuales.<br> 
+                    Al igual que las máquinas virtuales, los contenedores permiten empaquetar las aplicaciones con 
+                    bibliotecas y otras dependencias, de modo que se proporcionan entornos aislados para ejecutar tus 
+                    servicios de software. Sin embargo, como puedes ver a continuación, aquí se acaban todas las 
+                    similitudes, ya que los contenedores ofrecen una solución mucho más ligera con la que pueden trabajar 
+                    los desarrolladores y equipos de operaciones de TI y disfrutar de innumerables ventajas.
+                </p>
+                <ul>
+                    <li>Los contenedores son mucho más ligeros que las máquinas virtuales.</li>
+                    <li>Los contenedores virtualizan a nivel de SO y las máquinas virtuales, a nivel de hardware.</li>
+                    <li>Los contenedores comparten el kernel del SO y no utilizan tanta memoria como la que necesitan las máquinas virtuales.</li>
+                </ul>
+
+                <img src="img/c4.jpg" alt="c4">
+
+                <h2 id="usa"><br><br>¿Para qué se usan los contenedores?</h2><br>
+                <div class="container mt-5" style="background-color: rgb(207, 247, 233);"><br>
+                <h2 class="text-center mb-4"></h2>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <p class="card-text">Los contenedores constituyen un mecanismo de empaquetado lógico en el que las aplicaciones pueden extraerse del entorno en que realmente se ejecutan. Esta desvinculación facilita el despliegue uniforme de las aplicaciones basadas en ellos con independencia de que el entorno sea un centro de datos privado, la nube pública o el portátil personal de un desarrollador.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Desarrollo ágil</h5>
+                                <p class="card-text">Los contenedores permiten que los desarrolladores avancen con mucha más rapidez, ya que se pueden despreocupar de las dependencias y los entornos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Operaciones eficientes</h5>
+                                <p class="card-text">Los contenedores son ligeros y te permiten utilizar los recursos de computación indispensables, ni más ni menos. Así puedes ejecutar tus aplicaciones de manera eficiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejecución en cualquier lugar</h5>
+                                <p class="card-text">Los contenedores se pueden ejecutar casi en cualquier lugar. Donde quieras ejecutar el software, podrás usar contenedores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <h2 id="pro_ser"><br><br>Productos y servicios relacionados</h2><br>
+                <div class="container mt-5" style="background-color: rgb(207, 247, 233);"><br>
+               
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Google Kubernetes Engine</h5>
+                        <p class="card-text">Un servicio de Kubernetes seguro y fácil de usar que te permite ejecutar aplicaciones en contenedores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud Build</h5>
+                        <p class="card-text">Compila, prueba y despliega rápidamente tus aplicaciones en contenedores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud Run</h5>
+                        <p class="card-text">Escribe código a tu manera y en el lenguaje que prefieras y, luego, despliega tus aplicaciones en contenedores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Container Registry</h5>
+                        <p class="card-text">Almacena, gestiona y protege tus imágenes de contenedor Docker.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud Code</h5>
+                        <p class="card-text">Un entorno de desarrollo integrado para escribir, ejecutar y depurar aplicaciones en contenedores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Contenedores de aprendizaje profundo</h5>
+                        <p class="card-text">Contenedores con herramientas, bibliotecas y frameworks de ciencia de datos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <h2 class="text-center mt-5 mb-4">Soluciones</h2>
+        <div class="container mt-5" style="background-color: rgb(207, 247, 233);"><br>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Desarrollo de aplicaciones nativas de la nube</h5>
+                        <p class="card-text">Usa contenedores en Google Cloud para compilar aplicaciones nativas de la nube, ejecutarlas y realizar con ellas toda clase de operaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Modernización de aplicaciones con Anthos</h5>
+                        <p class="card-text">Moderniza las aplicaciones Java que ya tienes y mígralas a Cloud por medio de Anthos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <img src="img/c55.jpg" alt="c5">
+
+        <div style="background-color: rgb(220, 228, 252);" class="container mt-5">
+            <h2 id="formulario"><br><br>Formulario sobre Contenedores</h2>
+            <h2 class="mb-4"></h2>
+            <form id="formulario">
+                <div class="mb-3">
+                    <label class="form-label">1. ¿Qué es un contenedor?</label>
+                    <input type="text" class="form-control" name="pregunta1">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">2. ¿Cuál es el uso de los contenedores?</label>
+                    <input type="text" class="form-control" name="pregunta2">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">3. ¿Dónde se pueden ejecutar?</label>
+                    <input type="text" class="form-control" name="pregunta3">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">4. ¿Si creamos contenedores, qué permite a los equipos de desarrollo?</label>
+                    <input type="text" class="form-control" name="pregunta4">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">5. ¿Ventajas de los contenedores?</label>
+                    <input type="text" class="form-control" name="pregunta5">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">6. Similitudes y diferencias entre contenedores y máquinas virtuales</label>
+                    <input type="text" class="form-control" name="pregunta6">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">7. Diferencias entre Kubernetes y Docker</label>
+                    <input type="text" class="form-control" name="pregunta7">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">8. ¿En dónde son utilizados Kubernetes y Docker?</label>
+                    <input type="text" class="form-control" name="pregunta8">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="mostrarRespuestas()">Enviar</button>
+            </form>
+    
+            <div class="mt-4" id="respuestas" style="display:none;">
+                <h3>Respuestas:</h3>
+                <p><strong>1. ¿Qué es un contenedor?</strong> Los contenedores son paquetes ligeros que incluyen el código de las aplicaciones junto con sus dependencias.</p>
+                <p><strong>2. ¿Cuál es el uso de los contenedores?</strong> Permiten empaquetar aplicaciones para ejecutarlas de manera uniforme en cualquier entorno.</p>
+                <p><strong>3. ¿Dónde se pueden ejecutar?</strong> En centros de datos privados, la nube pública o incluso en un portátil personal.</p>
+                <p><strong>4. ¿Si creamos contenedores, qué permite a los equipos de desarrollo?</strong> Mayor agilidad, portabilidad, eficiencia en recursos, escalabilidad y mejor colaboración.</p>
+                <p><strong>5. ¿Ventajas de los contenedores?</strong> Separación de responsabilidades, portabilidad y aislamiento de aplicaciones.</p>
+                <h4>6. Similitudes y diferencias entre contenedores y máquinas virtuales</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Contenedores</th>
+                            <th>Máquinas Virtuales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aislamiento</td>
+                            <td>A nivel de sistema operativo</td>
+                            <td>A nivel de hardware</td>
+                        </tr>
+                        <tr>
+                            <td>Peso</td>
+                            <td>Ligeros</td>
+                            <td>Más pesadas</td>
+                        </tr>
+                        <tr>
+                            <td>Arranque</td>
+                            <td>Rápido</td>
+                            <td>Lento</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>7. Diferencias entre Kubernetes y Docker</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Kubernetes</th>
+                            <th>Docker</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Uso principal</td>
+                            <td>Orquestación de contenedores</td>
+                            <td>Creación y ejecución de contenedores</td>
+                        </tr>
+                        <tr>
+                            <td>Escalabilidad</td>
+                            <td>Automática y avanzada</td>
+                            <td>Manual y limitada</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>8. ¿En dónde son utilizados Kubernetes y Docker?</strong> Docker se usa en desarrollo de contenedores, mientras que Kubernetes se usa para ejecutar aplicaciones a gran escala.</p>
+            </div>
+        </div>
+        <script>
+            function mostrarRespuestas() {
+                document.getElementById('respuestas').style.display = 'block';
+            }
+        </script>
+
+        <h2 id="conclusion"><br><br>Conclusión</h2><br>
+        <p>
+                    Los contenedores han revolucionado la manera en que se desarrollan, despliegan y gestionan aplicaciones, 
+                    proporcionando una solución ágil y eficiente para la virtualización a nivel de sistema operativo. 
+                    Gracias a su capacidad de empaquetar aplicaciones junto con sus dependencias en entornos aislados, 
+                    los contenedores permiten una mayor portabilidad, escalabilidad y reproducibilidad en diversos 
+                    entornos de ejecución, desde equipos de desarrollo hasta entornos de producción en la nube.<br>
+
+                    Herramientas como Docker y Kubernetes han facilitado la adopción de esta tecnología, optimizando el uso 
+                    de recursos, reduciendo costos y mejorando la administración de infraestructuras complejas. Sin embargo, 
+                    también presentan desafíos en términos de seguridad, gestión del almacenamiento y monitoreo.<br>
+
+                    En conclusión, los contenedores son una pieza clave en la evolución de la informática moderna, 
+                    impulsando el desarrollo ágil y la computación en la nube, y se espera que sigan evolucionando con 
+                    mejoras en seguridad, automatización e integración con tecnologías emergentes.<br>
+                </p>
+                <br>
+                <img src="img/c5.jpg" alt="c6">
+                <br><br>
+                <h2 id="extra"></h2>
+                <h2 class="text-center mb-4">Información Extra</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gjRoNFopFig?si=6XPFzD_xVTHNuKSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/x5zGoICZLnU?si=y1imUTa7W7x9QItY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Índice estático -->
+            <div class="col-md-3 sidebar">
+                <h5>Índice</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#que">¿Qué son los Contenedotes?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#definicion">Definicion de los Contenedores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ventajas">Ventajas de los Contenedores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#maqu">¿Contenedores o Maquinas Virtuales?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#usa">¿Para que se usan los Contenedores?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pro_ser">Productos y Servicios relacionados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formulario">Formulario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#extra">Extra</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 LITC - Diseño Grafico - HTTP | Elisa Aguilar Valadez</p>
+    </footer>
+</body>
+</html>
