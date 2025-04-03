@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MICRO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome CSS para iconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+            font-size: 1.2em;
+            text-align: justify;
+            background-color: rgb(255, 249, 242);
+        }
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            right: 0;
+            width: 18%;
+            height: 90%;
+            overflow-y: auto;
+            background: #f8f9fa;
+            padding: 25px;
+        }
+        img {
+            display: block;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .sidebar .nav-item {
+            margin-bottom: 10px;
+        }
+            /* Estilos de las tarjetas */
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Estilos del botón de reinicio */
+    .btn-reiniciar {
+      background-color: #28a745;
+      color: white;
+      border-radius: 7px;
+    }
+    .btn-reiniciar:hover {
+      background-color: #218838;
+    }
+    
+    /* Estilos de alertas */
+    .alert {
+      border-radius: 10px;
+    }
+    
+    /* Estilos de la cabecera de la tarjeta */
+    .card-header {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+    }
+    
+    /* Estilos de la tabla de logs */
+    .logs-table thead {
+      background-color: #007bff;
+      color: white;
+    }
+    .logs-table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LITC - MICROSERVICIOS</a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                
+                <img src="img/m0.jpg" alt="m0">
+                <h2 id="que"><br><br>¿Qué son los Microservicios?</h2>
+                <p>Los microservicios <b>son módulos ligeros con acople suelto que pueden servir como componentes 
+                    básicos de las aplicaciones complejas basadas en la nube</b>. Aunque los microservicios individuales 
+                    pueden operar de forma independiente, tienen un acople suelto en una interfaz unificada.<br><br>
+
+                    La arquitectura de microservicios se considera un reemplazo moderno y flexible del modelo de desarrollo 
+                    más tradicional de la arquitectura monolítica.<br><br>
+
+                    En una arquitectura monolítica, generalmente hay un servidor virtualizado o físico asignado a cada 
+                    aplicación y esos servidores siempre están en ejecución. <b>La disponibilidad y el escalamiento de la 
+                    aplicación dependen completamente del hardware subyacente, que es una entidad fija.</b><br><br>
+
+                    Los microservicios, por el contrario, pueden operar varias instancias en un solo servidor o en varios 
+                    servidores, a medida que los recursos escalan de forma dinámica para admitir las demandas de la carga 
+                    de trabajo. Los microservicios individuales suelen estar en contenedores para mejorar la portabilidad 
+                    y la escalabilidad.
+                </p>
+
+                <img src="img/m1.jpg" alt="m1">
+                
+                <h2 id="caracteristicas"><br><br>Características de los microservicios</h2><br>
+                <p>
+                    Como proceso de desarrollo, el marco de microservicios tiene ciertas características 
+                    que son comunes, pero no universales.<br>
+                    Esas características incluyen:
+                </p>
+                <ul>
+                    <li><b>Componentes:</b> Los microservicios suelen estar formados por componentes de 
+                        software discretos que son actualizables y reemplazables de forma individual. 
+                        Esta arquitectura tiene implicaciones para la tecnología de administración de la 
+                        nube porque cada uno de los microservicios debe estar aprovisionado, monitoreado y 
+                        actualizado por separado.
+                    </li><br>
+                    <li><b>Servicios:</b> Los componentes comprenden servicios que están disponibles para comunicarse 
+                        a pedido, pero pueden no estar activos de forma continua entre las solicitudes o las llamadas.
+                    </li><br>
+                    <li><b>Implementación independiente:</b> En su mayor parte, los componentes de servicios individuales 
+                        operan de forma independiente uno de otro dentro del marco de microservicios. Si se cambia o 
+                        actualiza un componente, hay poco impacto en otros servicios y componentes, especialmente 
+                        cuando se compara con una arquitectura monolítica más tradicional.
+                    </li><br>
+                    <li><b>Seguridad:</b> La comunicación entre los microservicios suele estar cifrada con seguridad de 
+                        la capa de transporte mutuo (mTLS) para proteger los datos del malware y las intrusiones mientras 
+                        está en tránsito.
+                    </li><br>
+                    <li><b>Contenerización:</b> Los microservicios suelen implementarse en contenedores para lograr 
+                        escalabilidad y portabilidad adicionales.
+                    </li>
+                </ul><br>
+
+                <img src="img/m2.png" alt="m2">
+                <br>
+
+                <h2 id="benef"><br><br>Beneficios de los Microservicios en una Organización</h2><br>
+                <p>
+                    Los microservicios son una arquitectura moderna que permite mayor flexibilidad, escalabilidad 
+                    y eficiencia en el desarrollo de software.</p>
+
+                    <h5 >🔹 ¿Por qué los Microservicios?</h5>
+                    <p>Según IBM, el <strong>87 %</strong> de los usuarios de microservicios consideran que su 
+                        implementación vale la pena en términos de costos y esfuerzo.</p><br>
+                        
+                        
+                        <div  style="background-color: rgb(204, 245, 231);" class="row mt-4">
+                        <!-- Tarjeta 1 -->
+                        <div class="col-md-6">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Implementación Independiente</h5>
+                                    <p class="card-text">Los microservicios permiten desplegar y modificar componentes sin 
+                                        afectar toda la aplicación, mejorando la velocidad y la agilidad del desarrollo.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Tarjeta 2 -->
+                        <div class="col-md-6">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Flexibilidad Tecnológica</h5>
+                                    <p class="card-text">Cada microservicio puede usar diferentes tecnologías y bases de datos, 
+                                        optimizando su rendimiento sin restricciones de una pila monolítica.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div style="background-color: rgb(204, 245, 231);" class="row mt-3"><br>
+                        <!-- Tarjeta 3 -->
+                        <div class="col-md-6">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Escalabilidad Precisa</h5>
+                                    <p class="card-text">Permite escalar solo los servicios que lo necesitan, reduciendo 
+                                        costos de infraestructura en comparación con aplicaciones monolíticas.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Tarjeta 4 -->
+                        <div class="col-md-6">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Mayor Resiliencia</h5>
+                                    <p class="card-text">Si un servicio falla, el resto de la aplicación sigue funcionando, 
+                                        garantizando estabilidad y reducción de riesgos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="img/m3.webp" alt="m3">
+                
+                <h2 id="func"><br><br>Cómo funciona la arquitectura de microservicios</h2><br>
+                <p>
+                    En una arquitectura de microservicios, una aplicación compleja <b>se desglosa en capacidades discretas 
+                    que pueden desarrollarse y operarse de forma independiente.</b> Los microservicios individuales se 
+                    comunican entre sí, a menudo a través de las APIs, y tienen conexiones sueltas, pero cada microservicio 
+                    puede desarrollarse, implementarse y actualizarse por separado.<br>
+
+                    La implementación de microservicios suele seguir uno de tres patrones:<br>
+                </p>
+                <ul>
+                    <li><b>Nativo de la nube: </b>Algunos servicios y aplicaciones establecidos de alto volumen comienzan 
+                        como microservicios y permanecen en la nube. Según International Data Corporation (IDC), 
+                        alrededor del 56 % de los microservicios son nativos de la nube, mientras que el 44 % restante se 
+                        originaron como aplicaciones antiguas.
+                    </li><br>
+                    <li><b>Refactorización y cambio: </b>Estas implementaciones comienzan en las instalaciones o en un 
+                        centro de datos en el perímetro y se refactorizan para adaptarse a la arquitectura de microservicios 
+                        basados en la nube. La refactorización puede incluir reasignar bases de datos y otros recursos asociados 
+                        con la arquitectura monolítica, de modo que se combinen con los microservicios correspondientes.
+                    </li><br>
+                    <li><b>Lift and shift: </b>Algunas organizaciones migran sus aplicaciones a una arquitectura de microservicios, 
+                        sin refactorización, en una simple transición “lift and shift”.    
+                    </li>
+                </ul><br>
+    
+                <h2 id="desa"><br><br>⚠️ Desafíos de los Microservicios</h2><br>
+                    <table class="table table-bordered table-striped mt-3">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Desafío</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> Complejidad en la Gestión</td>
+                                <td>Requiere manejar múltiples servicios y su comunicación.</td>
+                            </tr>
+                            <tr>
+                                <td> Monitorización y Depuración</td>
+                                <td>Genera más datos de registro, complicando la supervisión.</td>
+                            </tr>
+                            <tr>
+                                <td> Problemas de Compatibilidad</td>
+                                <td>Las nuevas versiones pueden afectar a otros servicios.</td>
+                            </tr>
+                            <tr>
+                                <td> Latencia y Conectividad</td>
+                                <td>Mayor tráfico en la red puede generar problemas de rendimiento.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                <h2 id="mic_dev"><br><br>Microservicios y DevOps</h2><br>
+                <p>
+                    La arquitectura de microservicios tiene una naturaleza desglosada, lo que suele causar que los 
+                    equipos de DevOps adopten un enfoque de funciones cruzadas para el desarrollo de aplicaciones.<br><br>
+
+                    En lugar de desarrollar aplicaciones de software en una pila, con un equipo asignado para trabajar 
+                    en el firmware, otro para middleware y un tercero para las interfaces de usuario, por ejemplo, 
+                    es más probable que el esfuerzo de desarrollo de los microservicios se organice entorno a las 
+                    capacidades empresariales.<br><br>
+
+                    En cierto modo, los procesos de desarrollo y la organización de los equipos de DevOps pueden imitar la 
+                    estructura misma de los microservicios, con sus unidades autónomas casi independientes que interactúan 
+                    libremente, trascendiendo las barreras y silos.
+                </p>
+                <img src="img/m4.jpg" alt="m4">
+
+                <h2 id="uso"><br><br>Cuándo usar los microservicios</h2><br>
+                <p>
+                    Un enfoque de microservicios puede ayudar a migrar y escalar las aplicaciones mediante el desglose 
+                    de las soluciones más complejas en sus partes integrantes. Cada microservicio se desarrolla e implementa 
+                    de forma independiente, y los diversos microservicios operan juntos como una entidad integrada de forma 
+                    suelta.<br><br>
+
+                    Las organizaciones tienen más probabilidades de usar los microservicios cuando desarrollan una nueva 
+                    solución nativa de nube. También pueden implementar microservicios cuando una arquitectura monolítica 
+                    existente se vuelve muy poco manejable para satisfacer las necesidades cambiantes.<br><br>
+
+                    La transición a una arquitectura de microservicios puede producir cambios en la organización y la 
+                    estructura de los equipos mismos de DevOps Con el tiempo, los equipos pueden alinearse con su nuevo 
+                    enfoque interfuncional en las capacidades empresariales en lugar de los silos que imitan las capas 
+                    funcionales en la pila de tecnología.
+                </p>
+
+                <img src="img/m5.jpg" alt="m5">
+
+                <h2 id="ejem"><br><br>Ejemplo de microservicio</h2>
+
+                  <!-- Contenedor principal -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Tarjeta del microservicio de autenticación -->
+      <div class="col-md-4">
+        <div class="card" id="auth-service">
+          <div class="card-header">
+            <h5><i class="fas fa-user-shield status-icon"></i>    Autenticación de Usuarios</h5>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title" id="auth-status" style="color: green;">Activo</h6>
+            <button class="btn btn-reiniciar" onclick="reiniciarServicio('auth')"><i class="fas fa-sync-alt"></i>   Reiniciar</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tarjeta del microservicio de gestión de productos -->
+      <div class="col-md-4">
+        <div class="card" id="product-service">
+          <div class="card-header">
+            <h5><i class="fas fa-box status-icon"></i>   Gestión de Productos</h5>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title" id="product-status" style="color: rgb(252, 227, 5);">En Mantenimiento</h6>
+            <button class="btn btn-reiniciar" onclick="reiniciarServicio('product')"><i class="fas fa-sync-alt"></i>   Reiniciar</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tarjeta del microservicio de gestión de pedidos -->
+      <div class="col-md-4">
+        <div class="card" id="order-service">
+          <div class="card-header">
+            <h5><i class="fas fa-shopping-cart status-icon"></i>   Gestión de Pedidos</h5>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title" id="order-status" style="color: red;">Caído</h6>
+            <button class="btn btn-reiniciar" onclick="reiniciarServicio('order')"><i class="fas fa-sync-alt"></i>   Reiniciar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla de Logs -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <table class="table logs-table table-bordered">
+          <thead>
+            <tr>
+              <th style=" text-align: center">Fecha</th>
+              <th style=" text-align: center">Microservicio</th>
+              <th style=" text-align: center">Estado</th>
+              <th style=" text-align: center">Acción</th>
+            </tr>
+          </thead>
+          <tbody id="logs">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /**
+     * Función para reiniciar un microservicio.
+     * @param {string} servicio - Nombre del microservicio a reiniciar.
+     */
+    function reiniciarServicio(servicio) {
+      let statusElement, color, estado, icono;
+
+      switch (servicio) {
+        case 'auth':
+          statusElement = document.getElementById('auth-status');
+          color = 'green';
+          estado = 'Activo';
+          icono = 'fa-check-circle text-success';
+          break;
+        case 'product':
+          statusElement = document.getElementById('product-status');
+          color = 'yellow';
+          estado = 'En Mantenimiento';
+          icono = 'fa-cogs text-warning';
+          break;
+        case 'order':
+          statusElement = document.getElementById('order-status');
+          color = 'red';
+          estado = 'Caído';
+          icono = 'fa-times-circle text-danger';
+          break;
+      }
+
+      // Actualizar el estado del servicio
+      statusElement.textContent = estado;
+      statusElement.style.color = color;
+
+      // Agregar log de la acción
+      const fecha = new Date().toLocaleString();
+      const servicioNombre = servicio.charAt(0).toUpperCase() + servicio.slice(1).replace('-', ' ');
+      
+      const logRow = `
+        <tr>
+          <td>${fecha}</td>
+          <td>${servicioNombre}</td>
+          <td>${estado}</td>
+          <td><i class="fas ${icono}"></i></td>
+        </tr>
+      `;
+      document.getElementById('logs').insertAdjacentHTML('afterbegin', logRow);
+    }
+  </script>
+
+
+
+
+
+                <h2 id="Conclusion"><br><br>Conclusión</h2>
+                <p>
+                    Los microservicios representan una evolución en la arquitectura de software que permite mayor escalabilidad, 
+                    flexibilidad y resiliencia en comparación con los sistemas monolíticos tradicionales. Gracias a su 
+                    capacidad de desplegar e innovar de manera independiente, las organizaciones pueden mejorar la 
+                    eficiencia del desarrollo y la gestión de sus aplicaciones.<br><br>
+
+                    Sin embargo, su implementación también conlleva desafíos, como la complejidad en la orquestación, la 
+                    gestión de servicios y la latencia en la comunicación. Para aprovechar al máximo esta arquitectura, 
+                    es fundamental contar con una estrategia sólida de automatización, monitoreo y seguridad.<br><br>
+
+                    A pesar de estos retos, la creciente adopción de los microservicios en empresas de todos los sectores 
+                    demuestra que su valor supera los costos y esfuerzos iniciales, convirtiéndolos en una pieza clave para 
+                    el futuro del desarrollo de software.
+                </p>
+
+                <img src="img/m6.jpg" alt="m6">
+                <br><br>
+        <h2 id="extra"></h2>
+        <h2 class="text-center mb-4">Información Extra</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lL_j7ilk7rc?si=VreLbjGRtlEthK-T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p485kUNpPvE?si=FBGMBjSdMk_8HmVv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+            </div>
+
+            <!-- Índice estático -->
+            <div class="col-md-3 sidebar">
+                <h5>Índice</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#que">¿Qué son los Microservicios?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características de los Microservicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benef">Beneficios de los Microservicios en una Organización</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#func">¿Cómo funciona la arquitectura de microservicios?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#desa">Desafíos de los Microservicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mic_dev">Microservicios y DevOps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#uso">Cuándo usar los microservicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ejem">Ejemplo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Conclusion">Conclusión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#extra">Extra</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 LITC - Diseño Grafico - Microservicios | Elisa Aguilar Valadez</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

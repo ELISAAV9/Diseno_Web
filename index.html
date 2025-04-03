@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diseño Web - Proyecto Final</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #faf6e9;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center;
+            background-size: cover;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .carousel-item {
+            max-height: 650px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+        }
+        
+        .card {
+            background-color: #c6e3f8; /* Color azul claro para las tarjetas */
+            text-align: center;
+           
+        }
+        .introduccion {
+            font-size: 1.2rem; /* Aumenta el tamaño de letra */
+            text-align: justify; /* Justifica el texto */
+            margin: 20px auto; /* Agrega márgenes */
+            max-width: 85%; /* Limita el ancho para una mejor lectura */
+            line-height: 1.6; /* Mejora la separación entre líneas */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Diseño Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#introduccion">Introducción</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#temario">Temario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#extra">Extra</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/d1.jpg" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/dd.png" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/d55.png" class="d-block w-100" alt="Imagen 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <!-- Sección de Introducción -->
+    <section id="introduccion" class="container my-5">
+        <h2 class="text-center"><br><br>Introducción</h2>
+        <p class="introduccion">
+            Bienvenido a mi página web, un espacio dedicado a la materia de <strong>Diseño Web</strong> en el segundo parcial 
+            de mi carrera en <strong>Informática y Tecnologías Computacionales</strong>. Este sitio tiene como propósito exponer y 
+            organizar los diferentes temas vistos en clase, proporcionando información clara y estructurada sobre 
+            conceptos clave en el desarrollo web.
+        </p>
+        <p class="introduccion">
+            A lo largo del curso, hemos explorado diversas tecnologías y metodologías que nos permiten crear 
+            sitios web modernos, funcionales y accesibles. En esta plataforma, encontrarás explicaciones detalladas 
+            sobre temas fundamentales como el protocolo <strong>HTTP</strong>, el uso de <strong>APIs</strong>, el estándar de comunicación 
+            <strong>SOAP</strong>, entre otros. Cada uno de estos conceptos es esencial para comprender el funcionamiento de la web 
+            y cómo los diferentes sistemas interactúan entre sí.
+        </p>
+        <p class="introduccion">
+            Además, este sitio también servirá como un repositorio de recursos y referencias útiles que podrán 
+            ayudar tanto a mí como a otros estudiantes interesados en mejorar sus habilidades en desarrollo web. 
+            La intención es que esta plataforma sea un apoyo en nuestro proceso de aprendizaje, facilitando la consulta 
+            de información y brindando ejemplos prácticos que refuercen los conocimientos adquiridos en clase.
+        </p>
+        <p class="introduccion">
+            Espero que esta página no solo sea una herramienta útil para mi formación académica, sino también 
+            un reflejo del esfuerzo y dedicación que he puesto en aprender y aplicar los principios del diseño web. 
+            ¡Bienvenido y espero que la información aquí presentada te sea de gran utilidad!
+        </p>
+    </section>
+    
+    <!-- Sección de Temario -->
+    <section id="temario" class="container my-5">
+        <h2 class="text-center"><br><br>Temario del Semestre</h2>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">HTTP</h5>
+                        <p class="card-text">Protocolo de comunicación.</p>
+                        <a href="http.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Tecnologías de Web APIs</h5>
+                        <p class="card-text">Permiten a dos componentes comunicarse.</p>
+                        <a href="Apis.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">SOAP</h5>
+                        <p class="card-text">Utilizado para intercambiar información.</p>
+                        <a href="soap.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <br><br>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"> API REST</h5>
+                        <p class="card-text">Arquitectura para servicios web.</p>
+                        <a href="rest.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">JWT</h5>
+                        <p class="card-text">Mecanismo de autenticación segura.</p>
+                        <a href="jwt.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Microservicios</h5>
+                        <p class="card-text">Arquitectura modular escalable.</p>
+                        <a href="microservicios.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"> Desarrollo de una Web API</h5>
+                        <p class="card-text">Creando APIs escalables y flexibles con microservicios.</p>
+                        <a href="desa_api.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"> Manejo de Contenedores</h5>
+                        <p class="card-text">Optimización y despliegue ágil con contenedores.</p>
+                        <a href="contenedores.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"> Desarrollo de aplicaciones para la nube</h5>
+                        <p class="card-text">Aplicaciones escalables y eficientes en la nube.</p>
+                        <a href="apli_nuve.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   
+<!-- Formulario con Bootstrap y Diseño Mejorado -->
+<section id="contacto" class="container mt-5">
+    <h2 class="text-center text-dark mb-4"><br><br>Contacto</h2>
+    <p class="text-center">Ponte en contacto con nosotros a través de los siguientes medios:</p>
+
+    <div class="row text-center">
+        <div class="col-md-4" style=background-color:#edf5fc>
+            <i class="fas fa-map-marker-alt fa-2x text-danger mb-2"></i>
+            <h5>Dirección</h5>
+            <p>Av. Tecnologías 123, Ciudad, Ojuelos</p>
+        </div>
+        <div class="col-md-4" style=background-color:#edf5fc>
+            <i class="fas fa-phone fa-2x text-success mb-2"></i>
+            <h5>Teléfono</h5>
+            <p>+52 123 406 0090</p>
+        </div>
+        <div class="col-md-4" style=background-color:#edf5fc>
+            <i class="fas fa-envelope fa-2x text-warning mb-2"></i>
+            <h5>Correo Electrónico</h5>
+            <p>contacto@empresa.com</p>
+        </div>
+    </div>
+    <br><br>
+    <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow-lg p-4 border-light" style=background-color:#e4eff7>
+                <h4 class="text-center text-dark">Envíanos un mensaje</h4>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control border-secondary" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control border-secondary" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control border-secondary" id="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalConfirmacion">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="modalLabel">Mensaje Enviado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="text-dark">¡Tu mensaje ha sido enviado con éxito! Nos pondremos en contacto contigo pronto.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script para evitar que el modal se abra antes de la validación y corregir oscurecimiento -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío normal del formulario
+        var myModal = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
+        myModal.show();
+        this.reset(); // Reinicia el formulario después de enviar
+
+        // Solución para evitar que la pantalla se oscurezca después de cerrar el modal
+        document.body.classList.remove('modal-open');
+        document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+    });
+</script>
+<br><br>
+<h2 id="extra"></h2>
+<h2 class="text-center mb-4">Información Extra</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ELSm-G201Ls?si=TOAQoKlDp1Pc6a_a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RfS_a70WYQ0?si=jaxyO0VZgzhBgH_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div><br><br>
+
+<footer class="bg-dark text-white text-center py-3 mt-4">
+    <p>&copy; 2025 LITC - Proyecto - | Elisa Aguilar Valadez</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
