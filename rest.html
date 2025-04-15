@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API REST</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            padding-top: 56px;
+            font-size: 1.2em;
+            text-align: justify;
+            background-color: rgb(255, 249, 242);
+        }
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            right: 0;
+            width: 18%;
+            height: 80%;
+            overflow-y: auto;
+            background: #f8f9fa;
+            padding: 25px;
+        }
+        img {
+            display: block;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .sidebar .nav-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LITC - API REST</a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <a class="navbar-brand" href="Apis.html">Tec. Web APIs</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                
+                <img src="img/r0.jpg" alt="r0">
+                <h2 id="que"><br><br>¿Qué es una API REST?</h2>
+                <p><br>
+                    Una API, o interfaz de programación de aplicaciones es un conjunto de reglas que definen
+                    la forma en que aplicaciones o dispositivos pueden conectarse y comunicarse entre sí.
+                    Una API REST <b>es una API que se ajusta a los principios de diseño de REST, o el estilo de
+                    arquitectura de transferencia de estado representacional.</b> Por esta razón, las API REST a
+                    veces se denominan API RESTful.<br>
+                    Definido por primera vez en 2000 por el científico informático Dr. Roy Fielding en su tesis
+                    doctoral, REST proporciona un nivel relativamente alto de flexibilidad y libertad para los
+                    desarrolladores. Esta flexibilidad es solo una de las razones por las que las API REST han
+                    surgido como un método común para conectar componentes y aplicaciones en una
+                    arquitectura de microservicios.
+                </p>
+                
+                    <h2 id="Principios"><br><br>Principios de Diseño de REST</h2><br>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Principio</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Interfaz uniforme</strong></td>
+                                    <td>Todas las solicitudes para el mismo recurso deben tener el mismo formato, garantizando que los datos tengan un identificador uniforme (URI). Los recursos deben ser pequeños pero contener toda la información necesaria.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Desacoplamiento cliente-servidor</strong></td>
+                                    <td>El cliente y el servidor deben ser completamente independientes. El cliente solo necesita conocer el URI del recurso, y el servidor no debe modificar el cliente, solo proporcionarle los datos.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sin estado</strong></td>
+                                    <td>Cada solicitud debe contener toda la información necesaria para procesarla. El servidor no debe almacenar información de sesión del cliente.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Capacidad de caché</strong></td>
+                                    <td>Los recursos deben poder almacenarse en caché para mejorar el rendimiento y la escalabilidad. Las respuestas deben indicar si se permite el almacenamiento en caché.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Arquitectura en capas</strong></td>
+                                    <td>Las llamadas y respuestas pueden pasar por múltiples capas. Cliente y servidor no deben asumir que están conectados directamente.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Código bajo demanda (opcional)</strong></td>
+                                    <td>Aunque las API REST suelen enviar recursos estáticos, pueden incluir código ejecutable bajo demanda, como subprogramas de Java.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                <img src="img/r1.webp" alt="r1">
+                <br>
+
+                <h2 id="pra"><br><br>Practicas de API REST</h2><br>
+                <p>
+                    Aunque la flexibilidad es una gran ventaja del diseño de API REST, esta misma flexibilidad
+                    puede llevar a crear una API que no funcione correctamente o tenga un rendimiento
+                    deficiente. Por esta razón, los desarrolladores profesionales comparten las mejores 
+                    prácticas en las especificaciones de la API REST.<br>
+                    
+                    La Especificación OpenAPI (OAS) proporciona una interfaz para describir una API de 
+                    manera que cualquier desarrollador o aplicación pueda descubrir y comprender completamente
+                    sus parámetros y funcionalidades: puntos finales disponibles, operaciones permitidas en 
+                    cada punto final, parámetros de operación, métodos de autenticación y más. La última versión, 
+                    OAS3, incluye herramientas como OpenAPI Generator para generar apéndices de clientes y servidores 
+                    en distintos lenguajes de programación.<br>
+
+                    La protección de una API REST comienza con las mejores prácticas de seguridad, como el uso de algoritmos 
+                    hash para proteger contraseñas y HTTPS para la transmisión segura de datos. Un marco de autorización 
+                    como OAuth 2.0 puede ayudar a limitar los privilegios de las aplicaciones de terceros. Además, utilizando 
+                    una indicación de fecha y hora en los encabezados HTTP, una API puede rechazar solicitudes que lleguen 
+                    después de un determinado período de tiempo. La validación de parámetros y el uso de JSON Web Token 
+                    (JWT) también son prácticas comunes para asegurar que solo los clientes autorizados puedan acceder a 
+                    la API.<br>
+                </p>
+
+                <img src="img/r2.jpg" alt="r2">
+
+                <h2 id="metodos"><br><br>Métodos HTTP en REST</h2>
+                <p>
+                    REST utiliza los métodos estándar de HTTP para realizar las operaciones en los recursos.
+                    Los principales métodos son:
+                </p>
+                <ul>
+                    <li><b>GET:</b> Recupera un recurso del servidor. Es un método seguro (no altera el estado)
+                         y debe ser idempotente (el resultado es el mismo sin importar cuántas veces se ejecute).
+                    </li>
+                    <li><b>POST:</b> Crea un nuevo recurso en el servidor. Este método no es idempotente, 
+                        ya que cada ejecución puede crear un nuevo recurso.
+                    </li>
+                    <li><b>PUT:</b> Actualiza un recurso existente en el servidor. Si el recurso no existe, 
+                        puede ser creado, lo que hace que PUT sea idempotente.
+                    </li>
+                    <li><b>DELETE:</b>Elimina un recurso en el servidor. Este método también es idempotente.</li>
+                    <li><b>PATCH:</b> Realiza actualizaciones parciales en un recurso, a diferencia de PUT, 
+                        que suele reemplazar el recurso completo.
+                    </li>
+                </ul>
+                <br>
+                <img src="img/r3.png" alt="r3">
+
+                    <h2 id="vent_desv"><br><br>Ventajas y Desventajas de REST</h2><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 class="text-success">Ventajas de REST</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Simplicidad:</strong> Fácil de entender y usar, basado en métodos HTTP estándar.</li>
+                                <li class="list-group-item"><strong>Escalabilidad:</strong> Maneja grandes volúmenes de tráfico gracias a su capacidad de caché.</li>
+                                <li class="list-group-item"><strong>Independencia de plataforma:</strong> Funciona en cualquier sistema operativo y lenguaje de programación.</li>
+                                <li class="list-group-item"><strong>Flexibilidad:</strong> Permite estructurar los recursos y puntos finales según las necesidades.</li>
+                            </ul>
+                        </div>
+                
+                        <div class="col-md-6">
+                            <h4 class="text-danger">Desventajas de REST</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Limitaciones en transacciones complejas:</strong> No está diseñado para manejar transacciones distribuidas.</li>
+                                <li class="list-group-item"><strong>Sobrecarga de solicitudes:</strong> Al ser sin estado, cada solicitud debe contener toda la información necesaria.</li>
+                                <li class="list-group-item"><strong>Falta de estandarización:</strong> No hay una especificación formal detallada de implementación.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                <h2 id="conclusion"><br><br>Conclusión</h2>
+                <p>
+                    REST es un estilo arquitectónico que ha ganado mucha popularidad en el desarrollo de 
+                    servicios web debido a su simplicidad, flexibilidad y eficiencia. Si estás trabajando 
+                    en la creación de una API, REST es una excelente opción a considerar por sus numerosas 
+                    ventajas y su amplia adopción en la industria.
+                </p>
+                <img src="img/r4.jpg" alt="r4">
+                <br><br>
+                <h2 id="extra"></h2>
+                <h2 class="text-center mb-4">Información Extra</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JD6VNRdGl98?si=ESrOKGOj1Ym_4hG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DmTSIzaE7uI?si=xBe5xTqTd-NTrjPZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Índice estático -->
+            <div class="col-md-3 sidebar">
+                <h5>Índice</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#que">¿Qué es una API REST?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Principios">Principios deL Diseño de REST</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pra">Practicas de API REST</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#metodos">Métodos HTTP en REST</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vent_desv">Ventajas Y Desventajas de REST</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#extra">Extra</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 LITC - Diseño Grafico - API REST | Elisa Aguilar Valadez</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
